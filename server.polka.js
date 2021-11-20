@@ -12,7 +12,7 @@ const app = polka();
 const server = http.createServer(app);
 
 // initiate io
-const io = new Server(server)(process.env.PORT || 3000);
+const io = new Server(server)(process.env.PORT || 3000, {});
 
 // add serverEvents & socketEvents
 serverEvents(io, socketEvents);
