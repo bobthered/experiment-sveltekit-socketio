@@ -19,4 +19,4 @@ app.all('*', assetsMiddleware, prerenderedMiddleware, kitMiddleware);
 // Express users can also write in a second way:
 // app.use(assetsMiddleware, prerenderedMiddleware, kitMiddleware);
 
-app.listen(3000);
+app.listen(process.env.PORT || 3000);
