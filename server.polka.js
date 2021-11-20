@@ -7,8 +7,8 @@ import { serverEvents, socketEvents } from './src/lib/socketio/index.js';
 // initiate server
 const server = polka();
 
-// // initiate io
-// const io = new Server(server);
+// initiate io
+const io = new Server(server);
 
 // // add serverEvents & socketEvents
 // serverEvents(io, socketEvents);
