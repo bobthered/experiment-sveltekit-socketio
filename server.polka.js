@@ -1,22 +1,20 @@
-import { assetsMiddleware, prerenderedMiddleware, kitMiddleware } from './build/middlewares.js';
+// imports
 import polka from 'polka';
+import { Server } from 'socket.io';
+import { assetsMiddleware, prerenderedMiddleware, kitMiddleware } from './build/middlewares.js';
+import { serverEvents, socketEvents } from './src/lib/socketio/index.js';
 
-const app = polka();
+// initiate server
+const server = polka();
 
-const myMiddleware = function (req, res, next) {
-  console.log('Hello world!');
-  next();
-};
+// initiate io
+const io = new Server(server);
 
-app.use(myMiddleware);
+// add serverEvents & socketEvents
+serverEvents(io, socketEvents);
 
-app.get('/no-svelte', (req, res) => {
-  res.end('This is not Svelte!');
-});
+// add middlewares
+server.all('*', assetsMiddleware, prerenderedMiddleware, kitMiddleware);
 
-app.all('*', assetsMiddleware, prerenderedMiddleware, kitMiddleware);
-
-// Express users can also write in a second way:
-// app.use(assetsMiddleware, prerenderedMiddleware, kitMiddleware);
-
-app.listen(process.env.PORT || 3000);
+// server listen
+server.listen(process.env.PORT || 3000);

@@ -10,12 +10,11 @@
 
   // lifecycle
   onMount(async () => {
-    $loaded.db.bool = true;
-    // $socket = io();
-    // $socket.emit('dbInit', {}, (docs) => {
-    //   $loaded.db.bool = true;
-    //   console.log(docs);
-    // });
+    $socket = io();
+    $socket.emit('dbInit', {}, (docs) => {
+      $loaded.db.bool = true;
+      console.log(docs);
+    });
   });
 </script>
 
