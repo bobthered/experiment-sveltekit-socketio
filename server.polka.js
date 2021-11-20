@@ -14,8 +14,8 @@ const server = http.createServer(app);
 // initiate io
 const io = new Server(server);
 
-// // add serverEvents & socketEvents
-// serverEvents(io, socketEvents);
+// add serverEvents & socketEvents
+serverEvents(io, socketEvents);
 
 // add middlewares
 app.all('*', assetsMiddleware, prerenderedMiddleware, kitMiddleware);
