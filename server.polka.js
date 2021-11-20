@@ -11,8 +11,8 @@ const app = polka();
 // initiate server
 const server = http.createServer(app);
 
-// // initiate io
-// const io = new Server(server);
+// initiate io
+const io = new Server(server);
 
 // // add serverEvents & socketEvents
 // serverEvents(io, socketEvents);
