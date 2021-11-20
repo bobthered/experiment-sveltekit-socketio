@@ -9,7 +9,7 @@ import { serverEvents, socketEvents } from './src/lib/socketio/index.js';
 const config = {
 	kit: {
 		adapter: adapter({
-			entryPoint: ['./server.polka.js'],
+			entryPoint: ['./server.express.js'],
 			env: {
 				port: process.env.PORT | 3000,
 				host: '0.0.0.0'
