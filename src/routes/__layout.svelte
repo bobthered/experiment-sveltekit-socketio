@@ -2,19 +2,20 @@
   // imports
   import { io } from 'socket.io-client';
   import { onMount } from 'svelte';
-	import { loaded, socket } from '$stores';
+  import { loaded, socket } from '$stores';
   import '../app.css';
-	
-	// components
-	import { Loading } from '$components';
+
+  // components
+  import { Loading } from '$components';
 
   // lifecycle
   onMount(async () => {
-    $socket = io();
-    $socket.emit('dbInit', {}, (docs) => {
-      $loaded.db.bool = true;
-      console.log(docs);
-    });
+    $loaded.db.bool = true;
+    // $socket = io();
+    // $socket.emit('dbInit', {}, (docs) => {
+    //   $loaded.db.bool = true;
+    //   console.log(docs);
+    // });
   });
 </script>
 
@@ -22,4 +23,4 @@
   <slot />
 </div>
 
-<Loading/>
+<Loading />

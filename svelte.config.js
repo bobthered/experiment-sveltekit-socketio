@@ -9,7 +9,7 @@ import { serverEvents, socketEvents } from './src/lib/socketio/index.js';
 const config = {
 	kit: {
 		adapter: adapter({
-			entryPoint: './server.js'
+			entryPoint: ['./server.polka.js']
 		}),
 		target: '#svelte',
 		vite: {
