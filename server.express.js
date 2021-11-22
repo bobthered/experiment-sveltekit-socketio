@@ -20,7 +20,9 @@ serverEvents(io, socketEvents);
 
 // add middlewares
 app.use(compression());
-app.use('*', assetsMiddleware, prerenderedMiddleware, kitMiddleware);
+app.use('/', assetsMiddleware);
+app.use('/', prerenderedMiddleware);
+app.use(kitMiddleware);
 
 // server listen
 server.listen(process.env.PORT || 3000);
