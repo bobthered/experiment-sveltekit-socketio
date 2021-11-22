@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-vars */
-import vitePluginSocketIO from '@bobthered/vite-plugin-socket.io';
+import vitePluginSocketIO from 'vite-plugin-socket-io';
 import adapter from '@sveltejs/adapter-node';
 import path from 'path';
 import preprocess from 'svelte-preprocess';

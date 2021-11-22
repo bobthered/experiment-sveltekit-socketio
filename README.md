@@ -9,17 +9,17 @@ Socket.io needs to be added to the Vite server for development.
 
 ### Installation
 ```
-npm i -D @bobthered/vite-plugin-socket.io socket.io
+npm i -D vite-plugin-socket-io socket.io
 ```
 
 ### Docs
-See the docs for the plugin [here](https://github.com/bobthered/vite-plugin-socket.io)
+See the docs for the plugin [here](https://github.com/vite-plugin-socket-io/vite-plugin-socket-io)
 
 ### Usage
 ```js
 // svelte.config.js
 
-import vitePluginSocketIO from '@bobthered/vite-plugin-socket.io';
+import vitePluginSocketIO from 'vite-plugin-socket-io';
 import preprocess from 'svelte-preprocess';
 
 /** @type {import('@sveltejs/kit').Config} */
@@ -68,7 +68,7 @@ export const socketEvents (io, socket) => {
 ```js
 // svelte.config.js
 
-import vitePluginSocketIO from '@bobthered/vite-plugin-socket.io';
+import vitePluginSocketIO from 'vite-plugin-socket-io';
 import preprocess from 'svelte-preprocess';
 import { serverEvents, socketEvents } from 'path/to/socket.io.events.js'
 
@@ -140,7 +140,7 @@ server.listen(process.env.PORT || 3000);
 ### Usage
 ```js
 // svelte.config.js
-import vitePluginSocketIO from '@bobthered/vite-plugin-socket.io';
+import vitePluginSocketIO from 'vite-plugin-socket-io';
 import adapter from '@sveltejs/adapter-node';
 import preprocess from 'svelte-preprocess';
 import { serverEvents, socketEvents } from 'path/to/socket.io.events.js'
