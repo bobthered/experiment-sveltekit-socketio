@@ -2,7 +2,13 @@
 
 Add socket.io to sveltekit
 
-## Step 1. Add Vite plugin for [socket.io](https://socket.io/)
+## Step Overview
+
+1. \[ [Jump](#step-1) \] Add Vite plugin ( vite-plugin-socket-io ) & socket.io dependencies
+2. \[ [Jump](#step-2) \] Add socket.io server & socket events
+3. \[ [Jump](#step-3) \] Add adapter with custom endpoint
+
+## Step 1
 
 ### Description
 Socket.io needs to be added to the Vite server for development.
@@ -40,7 +46,7 @@ const config = {
 export default config;
 ```
 
-## Step 2. Add socket.io server & socket events
+## Step 2
 
 ### Description
 Server & socket events need to be created for your specific application.  These are passed to the Vite plugin.
@@ -93,7 +99,7 @@ const config = {
 export default config;
 ```
 
-## Step 3. Add adapter with custom endpoint
+## Step 3
 
 ### Description
 Add svelte's `adapter-node` and provide a custom endpoint.
