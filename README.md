@@ -9,7 +9,7 @@ Socket.io needs to be added to the Vite server for development.
 
 ### Installation
 ```
-npm i -D @bobthered/vite-plugin-socket.io
+npm i -D @bobthered/vite-plugin-socket.io socket.io
 ```
 
 ### Docs
