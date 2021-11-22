@@ -1,4 +1,5 @@
 // imports
+import compression from 'compression';
 import express from 'express';
 import http from 'http';
 import { Server } from 'socket.io';
@@ -18,6 +19,7 @@ const io = new Server(server);
 serverEvents(io, socketEvents);
 
 // add middlewares
+app.use(compression());
 app.use('*', assetsMiddleware, prerenderedMiddleware, kitMiddleware);
 
 // server listen
