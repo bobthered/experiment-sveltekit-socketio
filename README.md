@@ -77,7 +77,10 @@ const config = {
   kit: {
     target: '#svelte',
     vite: {
-      plugins: [vitePluginSocketIO({serverEvents, socketEvents})],
+      plugins: [vitePluginSocketIO({
+        serverEvents, 
+        socketEvents
+      })],
     }
   },
   preprocess: [
@@ -150,7 +153,10 @@ const config = {
     }),
     target: '#svelte',
     vite: {
-      plugins: [vitePluginSocketIO({serverEvents, socketEvents})],
+      plugins: [vitePluginSocketIO({
+        serverEvents, 
+        socketEvents
+      })],
     }
   },
   preprocess: [
