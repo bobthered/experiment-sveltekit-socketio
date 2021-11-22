@@ -24,17 +24,17 @@ import preprocess from 'svelte-preprocess';
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
-	kit: {
-		target: '#svelte',
-		vite: {
-			plugins: [vitePluginSocketIO()],
-		}
-	},
-	preprocess: [
-		preprocess({
-			postcss: true
-		})
-	],
+  kit: {
+    target: '#svelte',
+    vite: {
+      plugins: [vitePluginSocketIO()],
+    }
+  },
+  preprocess: [
+    preprocess({
+      postcss: true
+    })
+  ],
 };
 
 export default config;
@@ -74,17 +74,17 @@ import { serverEvents, socketEvents } from 'path/to/socket.io.events.js'
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
-	kit: {
-		target: '#svelte',
-		vite: {
-			plugins: [vitePluginSocketIO({serverEvents, socketEvents})],
-		}
-	},
-	preprocess: [
-		preprocess({
-			postcss: true
-		})
-	],
+  kit: {
+    target: '#svelte',
+    vite: {
+      plugins: [vitePluginSocketIO({serverEvents, socketEvents})],
+    }
+  },
+  preprocess: [
+    preprocess({
+      postcss: true
+    })
+  ],
 };
 
 export default config;
@@ -144,20 +144,20 @@ import { serverEvents, socketEvents } from 'path/to/socket.io.events.js'
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
-	kit: {
+  kit: {
     adapter: adapter({
-			entryPoint: ['path/to/server.js']
-		}),
-		target: '#svelte',
-		vite: {
-			plugins: [vitePluginSocketIO({serverEvents, socketEvents})],
-		}
-	},
-	preprocess: [
-		preprocess({
-			postcss: true
-		})
-	],
+      entryPoint: ['path/to/server.js']
+    }),
+    target: '#svelte',
+    vite: {
+      plugins: [vitePluginSocketIO({serverEvents, socketEvents})],
+    }
+  },
+  preprocess: [
+    preprocess({
+      postcss: true
+    })
+  ],
 };
 
 export default config;
